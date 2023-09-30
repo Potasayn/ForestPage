@@ -7,7 +7,8 @@
 	justify-content: center;
 	align-items: flex-start;
 	height: 50vh;
-	background-image: url('/dist/img/jungle-small.jpg');
+	// background-image: url('../../../dist/img/jungle-small.jpg');
+	background-image: url('../img/jungle-small.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -65,7 +66,7 @@
 // //lg
 @media (min-width: 992px) {
 	.hero {
-		background-image: url('/dist/img/jungle-big.jpg');
+		background-image: url('../img/jungle-big.jpg');
 		&__text {
 			&-title {
 				font-size: rem(26);
