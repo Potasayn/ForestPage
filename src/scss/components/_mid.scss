@@ -18,7 +18,7 @@
 			align-items: center;
 			height: 40%;
 			width: 70%;
-            max-width: rem(1400);
+			max-width: rem(1400);
 			max-height: rem(120);
 			border: solid 1px rgba($color: white, $alpha: 0.6);
 			z-index: 1;
@@ -45,18 +45,15 @@
 
 // // sm
 @media (min-width: 576px) {
-    .mid {
-
-        &__hero{
-
-            &-container {
-
-                &-title {
-                font-size: rem(20);
-                }
-            }
-        }
-    }
+	.mid {
+		&__hero {
+			&-container {
+				&-title {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
 }
 
 // // md
@@ -67,41 +64,38 @@
 	.mid {
 		&__hero {
 			height: 30vh;
-            background-image: url('../img/girl-big.jpg');
-            &-container {
-
-                &-title {
-                font-size: rem(30);
-                }
-            }
+			background-image: url('../img/girl-big.jpg');
+			&-container {
+				&-title {
+					font-size: rem(30);
+				}
+			}
 		}
 	}
 }
 
 // //xl
 @media (min-width: 1200px) {
-    .mid {
+	.mid {
 		&__hero {
-            &-container {
-
-                &-title {
-                font-size: rem(40);
-                }
-            }
+			&-container {
+				&-title {
+					font-size: rem(40);
+				}
+			}
 		}
 	}
 }
 
 // //xxl
 @media (min-width: 1400px) {
-    .mid {
+	.mid {
 		&__hero {
-            &-container {
-
-                &-title {
-                font-size: rem(50);
-                }
-            }
+			&-container {
+				&-title {
+					font-size: rem(50);
+				}
+			}
 		}
 	}
 }

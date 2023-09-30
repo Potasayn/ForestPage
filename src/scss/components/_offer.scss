@@ -103,7 +103,7 @@
 		display: flex;
 		justify-content: flex-end;
 
-		&-link{
+		&-link {
 			position: relative;
 			min-width: rem(170);
 			margin: rem(10) 0;
@@ -111,7 +111,7 @@
 			font-weight: 600;
 			text-align: center;
 			color: #000000;
-	
+
 			&::after {
 				content: '';
 				position: absolute;
@@ -130,7 +130,7 @@
 				z-index: -1;
 				transition: 0.3s;
 			}
-	
+
 			&:hover::after {
 				opacity: 1;
 				height: 100%;
@@ -140,7 +140,6 @@
 				margin-left: rem(5);
 			}
 		}
-
 	}
 }
 
@@ -200,8 +199,7 @@
 		}
 
 		&__all {
-
-			&-link{
+			&-link {
 				width: 30%;
 				font-size: rem(22);
 			}
@@ -311,7 +309,6 @@
 					font-size: rem(18);
 				}
 			}
-
 		}
 	}
 }

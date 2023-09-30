@@ -14,7 +14,7 @@
 		width: 100%;
 		height: rem(500);
 		border: none;
-        border-radius: 24px;
+		border-radius: 24px;
 	}
 }
 
@@ -52,9 +52,9 @@
 
 // //xxl
 @media (min-width: 1400px) {
-    .map {
-        &__title {
+	.map {
+		&__title {
 			font-size: rem(40);
 		}
-    }
+	}
 }

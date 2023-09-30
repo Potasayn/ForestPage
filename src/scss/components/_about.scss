@@ -4,7 +4,7 @@
 	padding: rem(40) rem(32);
 
 	&__title {
-        font-size: rem(30);
+		font-size: rem(30);
 		font-weight: 400;
 		text-align: center;
 		text-transform: uppercase;
@@ -12,25 +12,23 @@
 
 	&__container {
 		display: flex;
-        flex-direction: column;
+		flex-direction: column;
 
-        &-description{
+		&-description {
+			&-title {
+				margin-bottom: 0;
+				font-size: rem(20);
+			}
 
-            &-title{
-                margin-bottom: 0;
-                font-size: rem(20);
-            }
-            
-            &-text{
-                font-size: rem(15);
-                line-height: rem(25);
-            }
-        }
+			&-text {
+				font-size: rem(15);
+				line-height: rem(25);
+			}
+		}
 
-        &-img{
-            width: 100%;
-        }
-
+		&-img {
+			width: 100%;
+		}
 	}
 }
 
@@ -39,26 +37,24 @@
 
 // // md
 @media (min-width: 768px) {
-    .about {
-        scroll-margin-top: 82px;
+	.about {
+		scroll-margin-top: 82px;
 
-        &__title{
-            font-size: rem(35);
-        }
+		&__title {
+			font-size: rem(35);
+		}
 
 		&__container {
+			&-description {
+				&-title {
+					font-size: rem(25);
+				}
 
-            &-description{
-
-                &-title{
-                    font-size: rem(25);
-                }
-                
-                &-text{
-                    font-size: rem(18);
-                    line-height: rem(30);
-                }
-            }
+				&-text {
+					font-size: rem(18);
+					line-height: rem(30);
+				}
+			}
 		}
 	}
 }
@@ -66,29 +62,29 @@
 // //lg
 @media (min-width: 992px) {
 	.about {
-        padding: rem(50);
+		padding: rem(50);
 
-        &__title{
-            margin-bottom: rem(40);
-        }
+		&__title {
+			margin-bottom: rem(40);
+		}
 
 		&__container {
-            flex-direction: row;
+			flex-direction: row;
 
-            &-description{
-                order: 1;
-                
-                &-text{
-                    font-size: rem(15);
-                    line-height: rem(25);
-                }
-            }
-            
+			&-description {
+				order: 1;
+
+				&-text {
+					font-size: rem(15);
+					line-height: rem(25);
+				}
+			}
+
 			&-img {
-                order: -1;
-                margin-right: rem(77);
-                width: 45%;
-                height: 100%;
+				order: -1;
+				margin-right: rem(77);
+				width: 45%;
+				height: 100%;
 				content: url('../img/waters-big.jpg');
 			}
 		}
@@ -97,51 +93,46 @@
 
 // //xl
 @media (min-width: 1200px) {
-    .about {
-        padding: rem(55);
+	.about {
+		padding: rem(55);
 
-        &__title{
-            font-size: rem(38);
-        }
+		&__title {
+			font-size: rem(38);
+		}
 
 		&__container {
+			&-description {
+				&-title {
+					font-size: rem(28);
+				}
 
-            &-description{
-
-                &-title{
-                    font-size: rem(28);
-                }
-                
-                &-text{
-                    font-size: rem(18);
-                    line-height: rem(30);
-                }
-            }
+				&-text {
+					font-size: rem(18);
+					line-height: rem(30);
+				}
+			}
 		}
 	}
 }
 
 // //xxl
 @media (min-width: 1400px) {
-    .about {
-
-        &__title{
-            font-size: rem(40);
-        }
+	.about {
+		&__title {
+			font-size: rem(40);
+		}
 
 		&__container {
+			&-description {
+				&-title {
+					font-size: rem(30);
+				}
 
-            &-description{
-
-                &-title{
-                    font-size: rem(30);
-                }
-                
-                &-text{
-                    font-size: rem(20);
-                    line-height: rem(35);
-                }
-            }
+				&-text {
+					font-size: rem(20);
+					line-height: rem(35);
+				}
+			}
 		}
 	}
 }

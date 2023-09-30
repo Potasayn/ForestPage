@@ -1,95 +1,96 @@
 @use '../util/functions' as *;
 
-.offer-full{
-    padding: rem(40) rem(0);
+.offer-full {
+	padding: rem(40) rem(0);
 
-    &__title {
+	&__title {
 		font-size: rem(30);
 		font-weight: 400;
 		text-align: center;
 		text-transform: uppercase;
 	}
 
-    &__info {
+	&__info {
 		text-align: center;
 	}
 
-    &__container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
-    &__card{
-        display: flex;
-        width: 100%;
-        min-height: rem(192);
-        margin-bottom: rem(15);
-        overflow: hidden;
-        background-color: #f2f2f2;
-        transition: box-shadow 0.3s ;
+	&__card {
+		display: flex;
+		width: 100%;
+		min-height: rem(192);
+		margin-bottom: rem(15);
+		overflow: hidden;
+		background-color: #f2f2f2;
+		transition: box-shadow 0.3s;
 
-        &-text{
-            width: 50%;
-            padding: rem(32);
-            color: black;
+		&-text {
+			width: 50%;
+			padding: rem(32);
+			color: black;
 
-            &-info{
-                font-size: rem(15);
-            }
+			&-info {
+				font-size: rem(15);
+			}
 
-            &-btn{
-                font-weight: 700;
-                color: var(--green-color-hover);
-            }
-        }   
+			&-btn {
+				font-weight: 700;
+				color: var(--green-color-hover);
+			}
+		}
 
-        &-img{
-            width: 50%;
-            object-fit: cover;
-            transition: scale 0.3s ;
+		&-img {
+			width: 50%;
+			object-fit: cover;
+			transition: scale 0.3s;
 
-            &--first{
-                background-image: url('../img/avenue-first-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-            &--second{ 
-                background-image: url('../img/elephant-second-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-            &--third{ 
-                background-image: url('../img/forest-third-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-            &--fourth{ 
-                background-image: url('../img/forest-fourth-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-            &--fifth{ 
-                background-image: url('../img/road-fifth-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-            &--sixth{ 
-                background-image: url('../img/trees-sixth-s.jpg');
-                background-size: cover;
-                background-position: center;
-            }
-        }
+			&--first {
+				background-image: url('../img/avenue-first-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			&--second {
+				background-image: url('../img/elephant-second-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			&--third {
+				background-image: url('../img/forest-third-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			&--fourth {
+				background-image: url('../img/forest-fourth-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			&--fifth {
+				background-image: url('../img/road-fifth-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			&--sixth {
+				background-image: url('../img/trees-sixth-s.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+		}
 
-        &:hover{
-            box-shadow: 0px 16px 24px rgba($color: #000000, $alpha: 0.1), 0 2px 6px rgba($color: #000000, $alpha: 0.08);
+		&:hover {
+			box-shadow: 0px 16px 24px rgba($color: #000000, $alpha: 0.1),
+				0 2px 6px rgba($color: #000000, $alpha: 0.08);
 
-            .offer-full__card-img{
-                scale: 1.02;
-            }
-        }
-    }
+			.offer-full__card-img {
+				scale: 1.02;
+			}
+		}
+	}
 }
 
 // // sm
@@ -97,165 +98,149 @@
 
 // // md
 @media (min-width: 768px) {
-    .offer-full{
-        padding: rem(40) rem(15);
+	.offer-full {
+		padding: rem(40) rem(15);
 
-        &__title {
-            font-size: rem(35);
-        }
+		&__title {
+			font-size: rem(35);
+		}
 
-        &__info {
+		&__info {
 			font-size: rem(20);
 		}
- 
-        &__card{
-            min-height: rem(312);
-    
-            &-text{
-                width: 60%;
-                padding: rem(32);
 
-                &-title{
-                    font-size: rem(28);
-                }
-    
-                &-info{
-                    font-size: rem(20);
-                }
-    
-            }   
-        }
-    }
+		&__card {
+			min-height: rem(312);
+
+			&-text {
+				width: 60%;
+				padding: rem(32);
+
+				&-title {
+					font-size: rem(28);
+				}
+
+				&-info {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
 }
 
 // //lg
 @media (min-width: 992px) {
-    .offer-full{
-        padding: rem(50) rem(15);
-    
-        &__container{
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-    
-        &__card{
-            width: 48%;
-            min-height: rem(340);
-            margin-right: rem(15);
- 
-            &-text{
-                width: 50%;
+	.offer-full {
+		padding: rem(50) rem(15);
 
-                &-info{
-                    font-size: rem(15);
-                }
-    
-                &-btn{
-                    display: block;
-                    opacity: 0;
-                    transform: translateY(100%);
-                    transition: 0.3s ease-out;
-                }
-            }   
-    
-            &-img{
+		&__container {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 
-                &--first{
-                    background-image: url('../img/avenue-first-l.jpg');
+		&__card {
+			width: 48%;
+			min-height: rem(340);
+			margin-right: rem(15);
 
-                }
-                &--second{ 
-                    background-image: url('../img/elephant-second-l.jpg');
+			&-text {
+				width: 50%;
 
-                }
-                &--third{ 
-                    background-image: url('../img/forest-third-l.jpg');
+				&-info {
+					font-size: rem(15);
+				}
 
-                }
-                &--fourth{ 
-                    background-image: url('../img/forest-fourth-l.jpg');
+				&-btn {
+					display: block;
+					opacity: 0;
+					transform: translateY(100%);
+					transition: 0.3s ease-out;
+				}
+			}
 
-                }
-                &--fifth{ 
-                    background-image: url('../img/road-fifth-l.jpg');
+			&-img {
+				&--first {
+					background-image: url('../img/avenue-first-l.jpg');
+				}
+				&--second {
+					background-image: url('../img/elephant-second-l.jpg');
+				}
+				&--third {
+					background-image: url('../img/forest-third-l.jpg');
+				}
+				&--fourth {
+					background-image: url('../img/forest-fourth-l.jpg');
+				}
+				&--fifth {
+					background-image: url('../img/road-fifth-l.jpg');
+				}
+				&--sixth {
+					background-image: url('../img/trees-sixth-l.jpg');
+				}
+			}
 
-                }
-                &--sixth{ 
-                    background-image: url('../img/trees-sixth-l.jpg');
-
-                }
-            }
-    
-            &:hover{
-
-                .offer-full__card-text-btn{
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        }
-    }
+			&:hover {
+				.offer-full__card-text-btn {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
 }
 
 // //xl
 @media (min-width: 1200px) {
-    .offer-full{
-        padding: rem(55) rem(15);
+	.offer-full {
+		padding: rem(55) rem(15);
 
-        &__title {
+		&__title {
 			font-size: rem(38);
 		}
 
-        &__info {
+		&__info {
 			font-size: rem(23);
 		}
 
-        &__card{
-            min-height: rem(380);
+		&__card {
+			min-height: rem(380);
 
-            &-text{
+			&-text {
+				&-title {
+					font-size: rem(28);
+				}
 
-                &-title{
-                    font-size: rem(28);
-                }
-    
-                &-info{
-                    font-size: rem(20);
-                }
-    
-            }   
-    
-        }
-    }
+				&-info {
+					font-size: rem(20);
+				}
+			}
+		}
+	}
 }
 
 // //xxl
 @media (min-width: 1400px) {
-    .offer-full{
-
-        &__title {
+	.offer-full {
+		&__title {
 			font-size: rem(40);
 		}
 
-        &__info {
+		&__info {
 			font-size: rem(25);
 		}
 
-        &__card{
-            min-height: rem(400);
+		&__card {
+			min-height: rem(400);
 
-            &-text{
+			&-text {
+				&-title {
+					font-size: rem(32);
+				}
 
-                &-title{
-                    font-size: rem(32);
-                }
-    
-                &-info{
-                    font-size: rem(23);
-                }
-    
-            }   
-    
-        }
-    }
+				&-info {
+					font-size: rem(23);
+				}
+			}
+		}
+	}
 }
