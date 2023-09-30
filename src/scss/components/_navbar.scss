@@ -1,0 +1,202 @@
+@use '../util/functions' as *;
+
+.nav {
+	padding-right: em(32);
+	padding-left: em(32);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: rem(15);
+		margin-bottom: rem(15);
+
+		.hamburger {
+			position: relative;
+			width: rem(45);
+			height: rem(45);
+			z-index: 9999;
+			cursor: pointer;
+			transition: opacity 0.3s;
+
+			&__bar {
+				display: block;
+				top: 50%;
+				left: rem(5);
+			}
+
+			&__bar,
+			&__bar::after,
+			&__bar::before {
+				position: absolute;
+				display: block;
+				width: rem(35);
+				height: rem(4);
+				background-color: black;
+				border-radius: 3px;
+			}
+
+			&__bar::after,
+			&__bar::before {
+				content: '';
+				display: block;
+			}
+
+			&__bar::after {
+				top: rem(9);
+			}
+
+			&__bar::before {
+				top: rem(-9);
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		.hamburger--spin {
+			.hamburger__bar {
+				transition: background 10ms 300ms ease;
+				&::before,
+				&::after {
+					transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+				}
+			}
+		}
+
+		.hamburger--spin.is-active {
+			.hamburger__bar {
+				background: transparent;
+
+				&::before,
+				&::after {
+					transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+					top: 0;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&__icon {
+		.fa-solid {
+			margin-right: rem(7);
+			font-size: rem(25);
+			color: var(--gray);
+		}
+	}
+
+	&__name {
+		font-size: rem(30);
+		color: black;
+	}
+
+	&__menu {
+		display: none;
+	}
+}
+
+// // sm
+@media (min-width: 576px) {
+	.nav {
+		&__icon {
+			padding-left: rem(32);
+		}
+	}
+}
+
+// // md
+@media (min-width: 768px) {
+	.nav {
+		display: block;
+		position: sticky;
+		top: 0;
+		z-index: 999;
+		background-color: #fff;
+
+		&__container {
+			margin-top: 0;
+			margin-bottom: 0;
+
+			.hamburger {
+				display: none;
+			}
+		}
+
+		&__icon {
+			padding-left: rem(32);
+			.fa-solid {
+				margin-right: rem(5);
+				font-size: rem(30);
+				color: var(--gray);
+			}
+		}
+
+		&__menu {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			&-link {
+				position: relative;
+				display: block;
+				padding: rem(30);
+				z-index: 1;
+				transition: color 0.3s;
+				color: black;
+			}
+
+			&-active {
+				background-color: black;
+				color: white;
+			}
+
+			&-link::after {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				height: 1px;
+				width: 100%;
+				color: transparent;
+				visibility: none;
+				opacity: 0;
+				background-color: black;
+				z-index: -1;
+				transition: 0.3s;
+			}
+
+			&-link:hover {
+				color: white;
+			}
+
+			&-link:hover::after {
+				opacity: 1;
+				height: 100%;
+			}
+		}
+	}
+}
+
+// //lg
+// @media (min-width: 992px) {}
+
+// //xl
+// @media (min-width: 1200px) {}
+
+// //xxl
+// @media (min-width: 1400px) {}

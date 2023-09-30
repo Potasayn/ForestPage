@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Group - Kontakt</title>
+    <meta name="description" content="Masz pytania? Zkontaktuj się z nami lub odwieź nas w naszym biurze">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/169ae59f5b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../dist/css/style.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__container wrapper">
+            <div class="nav__icon">
+                <a href="index.html" class="nav__icon-link"><i class="fa-solid fa-tree"></i><span
+                        class="nav__name">Forest</span></a>
+            </div>
+            <ul class="nav__menu">
+                <li><a class="nav__menu-link nav__menu-active" href="index.html#home">Home</a></li>
+                <li><a class="nav__menu-link" href="index.html#about">O nas</a></li>
+                <li><a class="nav__menu-link offer-link" href="index.html#offer">Oferta</a></li>
+                <li><a class="nav__menu-link" href="contact-page.html">Kontakt</a></li>
+            </ul>
+            <div class="hamburger hamburger--spin">
+                <div class="hamburger__bar"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-nav">
+        <nav>
+            <ul class="mobile-nav__menu">
+                <li><a class="mobile-nav__link" href="index.html#about">O nas</a></li>
+                <li><a class="mobile-nav__link" href="index.html#offer">Oferta</a></li>
+                <li><a class="mobile-nav__link" href="contact-page.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section class="contact wrapper">
+            <h2 class="contact__title">Kontakt</h2>
+            <div class="contact__container">
+                <form class="contact__form">
+                    <div class="contact__form-box">
+                        <label for="name" class="contact__form-box-label">Imię i nazwisko:</label>
+                        <input id="name" type="text" class="contact__form-box-input">
+                        <p class="contact__form-box-error">Error</p>
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__form-box-label">Adres e-mail:</label>
+                        <input id="email" type="text" class="contact__form-box-input">
+                        <p class="contact__form-box-error">Error</p>
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="msg" class="contact__form-box-label">Wiadomość:</label>
+                        <textarea id="msg" class="contact__form-box-textarea"></textarea>
+                        <p class="contact__form-box-error">Error</p>
+                    </div>
+                    <button type="submit" class="contact__form-btn">Wyślij</button>
+                    <p class="contact__msg-status">Wiadomość została wysłana</p>
+                </form>
+            </div>
+        </section>
+        <section class="map wrapper">
+            <h2 class="map__title">Znajdź nas</h2>
+            <iframe class="map__source"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.8891896105731!2d19.89301444654743!3d50.08835718054516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1695823178133!5m2!1spl!2spl"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <h3 class="footer__box-logo"><i class="fa-solid fa-tree"></i><span
+                        class="footer__box-name">Forest</span></h3>
+            </div>
+            <div class="footer__container">
+                <div class="footer__box">
+                    <h3 class="footer__box-title">O nas</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Historia</a></li>
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Parki</a></li>
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Opinie</a></li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <h3 class="footer__box-title">Nasza firma</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Praca</a></li>
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Kadry</a></li>
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Zarząd</a></li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <h3 class="footer__box-title">Dokumenty</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Wnioski</a></li>
+                        <li class="footer__box-list-item"><a class="footer__box-list-link" href="#">Rezerwacje</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="footer__bottom-text">&copy;<span class="footer__year"></span>Forest Group Company Ltd.</p>
+</footer>
+    <script src="../dist/js/contact-page.min.js"></script>
+</body>
+
+</html>

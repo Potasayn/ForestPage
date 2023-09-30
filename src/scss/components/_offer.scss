@@ -1,0 +1,317 @@
+@use '../util/functions' as *;
+
+.offer {
+	padding: rem(40) rem(32);
+
+	&__title {
+		font-size: rem(30);
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__info {
+		text-align: center;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		min-width: 240px;
+		margin: rem(20);
+		padding: rem(30) rem(25);
+		box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.3);
+		border-radius: 4px;
+		transition: scale 0.3s;
+
+		&-title {
+			margin-bottom: rem(5);
+			font-weight: 500;
+		}
+
+		&-price {
+			margin: 0;
+			font-weight: 800;
+			font-size: rem(35);
+		}
+
+		&-list {
+			list-style: none;
+			padding: 0;
+			margin-bottom: rem(25);
+
+			&-item {
+				margin-bottom: rem(2);
+				font-size: rem(14);
+				font-weight: 500;
+
+				&--alpha {
+					color: rgba($color: #424242, $alpha: 0.5);
+				}
+			}
+
+			.fa-solid {
+				margin-right: rem(8);
+			}
+
+			.fa-check {
+				color: var(--green-color);
+			}
+
+			.fa-minus {
+				color: rgba($color: #424242, $alpha: 0.5);
+			}
+		}
+
+		&-btn {
+			width: 80%;
+			padding: rem(7) 0;
+			box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+			color: rgba($color: #424242, $alpha: 0.8);
+			font-weight: 500;
+			border-radius: 8px;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: #dddddd;
+			}
+
+			&--green {
+				color: #000000;
+				background-color: var(--green-color);
+				&:hover {
+					background-color: var(--green-color-hover);
+				}
+			}
+		}
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+
+	&__all {
+		display: flex;
+		justify-content: flex-end;
+
+		&-link{
+			position: relative;
+			min-width: rem(170);
+			margin: rem(10) 0;
+			font-size: rem(17);
+			font-weight: 600;
+			text-align: center;
+			color: #000000;
+	
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				height: 1px;
+				width: 100%;
+				color: transparent;
+				visibility: none;
+				opacity: 0;
+				background-color: var(--green-color);
+				z-index: -1;
+				transition: 0.3s;
+			}
+	
+			&:hover::after {
+				opacity: 1;
+				height: 100%;
+			}
+
+			.fa-solid {
+				margin-left: rem(5);
+			}
+		}
+
+	}
+}
+
+// // sm
+@media (min-width: 576px) {
+	.offer {
+		&__card {
+			width: 65%;
+		}
+
+		&__all {
+			&-link {
+				font-size: rem(18);
+			}
+		}
+	}
+}
+
+// // md
+@media (min-width: 768px) {
+	.offer {
+		scroll-margin-top: 82px;
+
+		&__title {
+			font-size: rem(35);
+		}
+
+		&__info {
+			font-size: rem(18);
+		}
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			width: 40%;
+			padding: rem(40) rem(25);
+
+			&-title {
+				font-size: rem(20);
+			}
+
+			&-price {
+				font-size: rem(40);
+			}
+
+			&-list {
+				&-item {
+					font-size: rem(15);
+				}
+			}
+
+			&-btn {
+				font-size: rem(17);
+			}
+		}
+
+		&__all {
+
+			&-link{
+				width: 30%;
+				font-size: rem(22);
+			}
+		}
+	}
+}
+
+// //lg
+@media (min-width: 992px) {
+	.offer {
+		padding: rem(50);
+
+		&__card {
+			width: 35%;
+
+			&-list {
+				&-item {
+					font-size: rem(16);
+				}
+			}
+
+			&-btn {
+				font-size: rem(18);
+			}
+		}
+
+		&__all {
+			.fa-solid {
+				margin-left: rem(8);
+			}
+		}
+	}
+}
+
+// //xl
+@media (min-width: 1200px) {
+	.offer {
+		padding: rem(55);
+
+		&__title {
+			font-size: rem(38);
+		}
+
+		&__info {
+			font-size: rem(20);
+		}
+
+		&__cards {
+			flex-wrap: nowrap;
+		}
+
+		&__card {
+			width: 25%;
+
+			&-title {
+				font-size: rem(22);
+			}
+
+			&-price {
+				font-size: rem(43);
+			}
+
+			&-list {
+				&-item {
+					font-size: rem(17);
+				}
+			}
+
+			&-btn {
+				font-size: rem(19);
+			}
+		}
+
+		&__all {
+			&-link {
+				width: 25%;
+				font-size: rem(22);
+			}
+		}
+	}
+}
+
+// //xxl
+@media (min-width: 1400px) {
+	.offer {
+		&__title {
+			font-size: rem(40);
+		}
+
+		&__info {
+			font-size: rem(22);
+		}
+
+		&__card {
+			&-title {
+				margin-bottom: rem(10);
+				font-size: rem(24);
+			}
+
+			&-price {
+				margin-bottom: rem(5);
+				font-size: rem(45);
+			}
+
+			&-list {
+				&-item {
+					font-size: rem(18);
+				}
+			}
+
+		}
+	}
+}

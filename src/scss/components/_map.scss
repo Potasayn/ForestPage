@@ -1,0 +1,60 @@
+@use '../util/functions' as *;
+
+.map {
+	padding: rem(40) rem(0);
+
+	&__title {
+		font-size: rem(30);
+		font-weight: 400;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__source {
+		width: 100%;
+		height: rem(500);
+		border: none;
+        border-radius: 24px;
+	}
+}
+
+// // sm
+// @media (min-width: 576px) {}
+
+// // md
+@media (min-width: 768px) {
+	.map {
+		padding: rem(40) rem(15);
+
+		&__title {
+			font-size: rem(35);
+		}
+	}
+}
+
+// //lg
+@media (min-width: 992px) {
+	.map {
+		padding: rem(50) rem(15);
+	}
+}
+
+// //xl
+@media (min-width: 1200px) {
+	.map {
+		padding: rem(55) rem(15);
+
+		&__title {
+			font-size: rem(38);
+		}
+	}
+}
+
+// //xxl
+@media (min-width: 1400px) {
+    .map {
+        &__title {
+			font-size: rem(40);
+		}
+    }
+}

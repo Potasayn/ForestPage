@@ -1,0 +1,50 @@
+@use '../util/functions' as *;
+
+.mobile-nav {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	transform: translateX(-102%);
+	transition: transform 0.3s;
+	z-index: 999;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__menu {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: em(8);
+		padding: em(7);
+		font-size: rem(40);
+		color: black;
+		transition: color 0.3s;
+
+		&:hover {
+			color: var(--green-color-hover);
+		}
+
+		&:focus {
+			outline: none;
+			border: 1px solid var(--green-color-hover);
+			border-radius: 5px;
+		}
+	}
+}

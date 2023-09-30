@@ -1,0 +1,109 @@
+@use '../util/functions' as *;
+
+.hero {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	height: 50vh;
+	background-image: url('../../../dist/img/jungle-small.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__text {
+		padding-left: rem(32);
+		padding-right: rem(32);
+		z-index: 1;
+		color: white;
+
+		&-title {
+			margin-bottom: 0;
+			font-size: rem(16);
+			font-weight: 200;
+		}
+
+		&-description {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 600;
+			font-size: rem(26);
+		}
+	}
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		background-color: rgba($color: #000000, $alpha: 0.4);
+	}
+}
+
+// // sm
+// @media (min-width: 576px) {}
+
+// // md
+@media (min-width: 768px) {
+	.header {
+		scroll-margin-top: 84px;
+	}
+
+	.hero {
+		&__text {
+			&-title {
+				font-size: rem(22);
+			}
+
+			&-description {
+				font-size: rem(32);
+			}
+		}
+	}
+}
+
+// //lg
+@media (min-width: 992px) {
+	.hero {
+		background-image: url(../../../dist/img/jungle-big.jpg);
+		&__text {
+			&-title {
+				font-size: rem(26);
+			}
+
+			&-description {
+				font-size: rem(36);
+			}
+		}
+	}
+}
+
+// //xl
+@media (min-width: 1200px) {
+	.hero {
+		&__text {
+			&-title {
+				font-size: rem(30);
+			}
+
+			&-description {
+				font-size: rem(40);
+			}
+		}
+	}
+}
+
+// //xxl
+@media (min-width: 1400px) {
+	.hero {
+		&__text {
+			&-title {
+				font-size: rem(35);
+			}
+
+			&-description {
+				font-size: rem(45);
+			}
+		}
+	}
+}
